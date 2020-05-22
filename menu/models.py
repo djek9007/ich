@@ -54,8 +54,7 @@ class MenuItem(MPTTModel):
     sort = models.PositiveIntegerField(_('Порядок'), default=0)
     published = models.BooleanField(_("Отображать?"), default=True)
 
-    def get_absolute_url(self):
-        return '/%s' % self.name
+ 
 
     def __str__(self):
         return self.title
