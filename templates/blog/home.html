@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static  blog_tags %}
+
+{% block content %}
+
+{% post_item category=5 count=3  template='inc/tags/blog/1_post_tag_main.html' %}
+
+{% post_item category=10 template='inc/tags/blog/2_human_tag.html' %}
+
+{% post_item category=3 count=5 template='inc/tags/blog/3_last_news_tag_main.html' %}
+
+{% get_popular %}
+
+{% endblock %}

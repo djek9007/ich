@@ -1,0 +1,22 @@
+{% load menu_tags %}
+<div class="col-lg-4">
+
+    <!-- Most Recent Area -->
+    <div class="most-recent-area">
+        <!-- Section Tittle -->
+        <div class="small-tittle mb-20">
+            <h4>Бағыттар</h4>
+        </div>
+{#        {% menu_item 'Right_sidebar' template='inc/tags/menu/right_sidebar_tag.html' %}#}
+        {% for_menu_item 'Right_sidebar' as menu %}
+        {% for item_menu in menu %}
+            <!-- Single -->
+            <div class="most-recent-single">
+
+                <div class="most-recent-capt">
+                    <h4><a href="{{ item_menu.name }}">{{ item_menu.title }}</a></h4>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

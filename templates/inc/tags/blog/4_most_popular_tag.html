@@ -1,0 +1,44 @@
+<!--   Weekly2-News start -->
+<div class="weekly2-news-area pt-50 pb-30 gray-bg">
+    <div class="container">
+        <div class="weekly2-wrapper">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="slider-wrapper">
+                        <!-- section Tittle -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="small-tittle mb-30">
+                                    <h4>Көп оқылатын материалдар</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="weekly2-news-active d-flex">
+                                    <!-- Single -->
+                                    {% for post in items %}
+                                        <div class="weekly2-single">
+                                            <div class="weekly2-img">
+                                                <img src="{{ post.image.url }}" alt="">
+                                            </div>
+                                            <div class="weekly2-caption">
+                                                <h4><a href="#">{{ post.title}}</a></h4>
+
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Weekly-News -->

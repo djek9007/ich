@@ -1,0 +1,25 @@
+<div class="col-lg-4">
+
+
+    <!-- Most Recent Area -->
+    <div class="most-recent-area">
+        <!-- Section Tittle -->
+        <div class="small-tittle mb-20">
+            <h4>Е-кітаптар</h4>
+        </div>
+
+        <!-- Single -->
+        {% for book in items %}
+            <div class="most-recent-single">
+                <div class="most-recent-images">
+                    <img src="{{ book.image.url }}" alt="" height="90px">
+                </div>
+                <div class="most-recent-capt">
+                    <h4><a href="latest_news.html">{{ book.title }}</a></h4>
+
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>

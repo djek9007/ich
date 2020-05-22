@@ -1,0 +1,79 @@
+{% load static book_tags%}
+<section class="whats-news-area pt-50 pb-20 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="whats-news-wrapper">
+                    <!-- Heading & Nav Button -->
+                    <div class="row justify-content-between align-items-end mb-15">
+                        <div class="col-xl-4">
+                            <div class="section-tittle mb-30">
+                                <h3>Жаңалықтар</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Tab content -->
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Nav Card -->
+
+                            <!-- card one -->
+
+                            <div class="row">
+                                <!-- Left Details Caption -->
+
+                                <div class="col-xl-6 col-lg-12">
+                                    {% for post in items %}
+                                        {% if forloop.first %}
+                                            <div class="whats-news-single mb-40 mb-40">
+                                                <div class="whates-img">
+                                                    <img src="{{ post.image.url }}" alt="">
+                                                </div>
+                                                <div class="whates-caption">
+                                                    <h4><a href="latest_news.html">{{ post.title }}</a></h4>
+                                                    {{ post.text|safe|truncatechars_html:190 }}
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <!-- Right single caption -->
+
+                                            <div class="col-xl-6 col-lg-12">
+
+                                            <div class="row">
+                                            <!-- single -->
+                                        {% else %}
+                                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
+
+                                                <div class="whats-right-single mb-20">
+                                                    <div class="whats-right-img">
+                                                        <img src="{{ post.image.url }}" alt="" height="100px">
+                                                    </div>
+                                                    <div class="whats-right-cap">
+
+                                                        <h4><a href="latest_news.html">{{ post.title }}</a></h4>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </div>
+
+                                    </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner -->
+            </div>
+
+
+{% book_item count=5 %}
+
+        </div>
+    </div>
+</section>
